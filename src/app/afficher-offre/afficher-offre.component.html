@@ -1,0 +1,35 @@
+<h2>List of offres <small> by feryel </small></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>date</th>
+      <th>title</th>
+      <th>idEntreprise</th>
+      <th>description</th>
+      <th>location</th>
+      <th>remote</th>
+      <th>easyApply</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let classItem of offres">
+      <td>{{ classItem.id }}</td>
+      <td>{{ classItem.title }}</td>
+      <td>{{ classItem.idEntreprise }}</td>
+      <td>{{ classItem.description }}</td>
+      <td>{{ classItem.description }}</td>
+      <td>{{ classItem.location }}</td>
+      <td>{{ classItem.remote }}</td>
+      <td>{{ classItem.easyApply }}</td>
+      <td>
+        <button (click)="deleteOffre(classItem.idclass)" style="margin-right: 15px;">Delete</button>
+        <button (click)="updateOffre(classItem)" style="margin-right: 15px;">Update</button>
+        <button (click)="showDetails(classItem)" style="margin-right: 15px;">Details</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+  <app-offre-details *ngIf="selectedOffre" [class]="selectedOffre"></app-offre-details >

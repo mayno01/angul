@@ -1,0 +1,10 @@
+<div class="offre-details" *ngIf="offre">
+    <h2>Offre Details</h2>
+    <p>ID: {{ offre.id }}</p>
+    <p>Title: {{ offre.title }}</p>
+    <p>Date: {{ offre.date | date }}</p>
+    <p>Description: {{ offre.description }}</p>
+    <p>Location: {{ offre.location }}</p>
+    <p>Remote: {{ offre.remote }}</p>
+    <p>Easy Apply: {{ offre.easyApply ? 'Yes' : 'No' }}</p>
+</div>
